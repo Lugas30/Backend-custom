@@ -1,0 +1,310 @@
+
+.fp-group {
+    display: inline-flex;
+}
+
+.fp-upload {
+    display: block;
+    font-size: 12px;
+    width: 150px;
+    overflow: hidden;
+}
+
+
+
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxs {
+    display: block;
+    /* min-width: 150px; */
+    width: 150px;
+    height: 220px;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+}
+
+.upload-options {
+    position: relative;
+    height: 35px;
+    background-color: #3BD09C;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    transition: background-color ease-in-out 150ms;
+}
+
+.upload-options:hover {
+    background-color: #34B487;
+}
+
+.upload-options input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.upload-options label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.upload-options label::after {
+    content: 'Tambah foto';
+    position: absolute;
+    font-size: 12px;
+    color: #ffffff;
+    top: calc(50% - 10px);
+    left: calc(50% - 2.5rem);
+    z-index: 0;
+}
+
+.upload-options label span {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.upload-options label span:hover i.material-icons {
+    color: lightgray;
+}
+
+.js--image-preview {
+    height: 185px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-image: url('');
+    background-color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.js--image-preview::after {
+    content: "Size 500 x 800";
+    font-family: 'Material Icons';
+    position: relative;
+    font-size: 16px;
+    color: #aaaaaa;
+    top: calc(50% - 1rem);
+    left: calc(50% - 3rem);
+    z-index: 0;
+}
+
+.js--image-preview.js--no-default::after {
+    display: none;
+}
+
+.js--image-preview:nth-child(2) {
+    background-image: url('http://bastianandre.at/giphy.gif');
+}
+
+i.material-icons {
+    transition: color 100ms ease-in-out;
+    font-size: 2.25em;
+    line-height: 55px;
+    color: white;
+    display: block;
+}
+
+.drop {
+    display: block;
+    position: absolute;
+    background: rgba(95, 158, 160, 0.2);
+    border-radius: 100%;
+    transform: scale(0);
+}
+
+.animate {
+    animation: ripple 0.4s linear;
+}
+
+@keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(2.5);
+    }
+}
+
+
+.form-group label {
+    font-size: 12px;
+}
+
+.title-form {
+    font-size: 12px;
+}
+
+
+/*-- Detail ukuran (Size) --*/
+
+.ukuran-wrap {
+    width: auto;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.input-variasi {
+    width: 150px;
+    white-space: 10px;
+}
+
+
+
+/* Input warna */
+
+.center {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.form-input {
+    width: 200px;
+    background: #fff;
+    display: inline-flex;
+}
+
+.form-input img {
+    width: 32px;
+    height: 32px;
+    border: solid 0.0px #c9c9c9;
+    display: inline-flex;
+}
+
+.form-input input {
+    display: none;
+}
+
+.form-input label {
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    background: #3BD09C;
+    color: #fff;
+    font-size: 12px;
+    padding: 0px 10px;
+    margin: 2px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.form-input label:hover {
+    background:#34B487;
+}
+
+
+/*-- Halaman pemesanan --*/
+/*-- Filter tanggal --*/
+
+.filter-date-label {
+    font-size: 12px;
+}
+
+.fp-pemesanan img{
+    width: 60px;
+    height: 60px;
+}
+
+.blok-pesanan {
+    font-size: 12px;
+}
+
+.blok-pesanan .link-pemesanan {
+    color: #000000;
+    text-decoration: none;
+    border: solid 1px #dddddd;
+}
+
+.pesanan-detail {
+    font-size: 10px;
+    color: #9c9c9c;
+}
+
+
+
+
+.filterDiv {
+    display: none;
+    /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+
+
+/* Style the buttons */
+.btn-filters {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 6px 10px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.btn-filters:hover {
+    background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.btn-filters.active {
+    background-color: #666;
+    color: white;
+}
+
+
+
+/* -- Rincian pesenan -- */
+
+.subjek {
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+}
+
+.subjek-val {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.subjek-val-total {
+    font-size: 18px;
+    font-weight: 500;
+    color: #34B487;
+}
+
+.tbl-summary td span {
+    text-align: right !important;
+}
